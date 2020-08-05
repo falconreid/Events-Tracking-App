@@ -1,3 +1,14 @@
+/* Color Scheme
+Light Blue #279DD8
+Azure Blue #3185FC
+Mango Tango (orange) #FF8C42
+Light Yellow #FFE14E 
+Blue Lighten-2 #64b5f6
+Orange Lighten-3 #ffcc80
+Yellow Lighten  #fff176
+
+*/
+
 /* Font Styling*/
 
 /*  Geometria */
@@ -102,6 +113,33 @@ h6 em {
     sans-serif;
 }
 
+body {
+  font-family: "geometria", "blogger_sansregular", Arial, Helvetica, sans-serif;
+}
+
+nav,
+footer,
+.page-footer {
+  background-color: #ffcc80;
+  color: #000;
+  text-align: center;
+}
+
+#navTop {
+  background-color: #ff8c42;
+}
+
+nav {
+  max-height: 100%;
+  height: 115px;
+  vertical-align: middle;
+}
+
+header img #header-logo {
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
 #spacing {
   height: 150px;
 }
@@ -113,4 +151,45 @@ h6 em {
 #logo {
   display: inline-block;
   margin: 0 auto !important;
+}
+
+/* Sticky Footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav img.nav {
+  width: 35px;
+  height: 35px;
+}
+
+#sideBar img.nav {
+  width: 35px;
+  height: 35px;
+  margin-left: -10px;
+}
+
+#sideBar {
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+#mainContent {
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+nav.navFooter {
+  height: 45px;
+  padding: 5px;
+}
+
+#footNav {
+  background-color: #ff8c42;
 }
