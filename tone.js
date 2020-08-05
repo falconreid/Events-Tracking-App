@@ -1,9 +1,10 @@
-const synth = new Tone.Synth().toDestination();
-const now = Tone.now()
-synth.triggerAttackRelease("C4", "8n", now)
-synth.triggerAttackRelease("E4", "8n", now + 0.5)
-synth.triggerAttackRelease("G4", "8n", now + 1)
-
+const osc = new Tone.Oscillator().toDestination();
+// start at "C4"
+osc.frequency.value = "C4";
+// ramp to "C2" over 2 seconds
+osc.frequency.rampTo("C2", 2);
+// start the oscillator for 2 seconds
+osc.start().stop("+3");
 //attach a click listener to a play button
 document.querySelector('.dropdown-trigger').addEventListener('click', async () => {
   await Tone.start()
