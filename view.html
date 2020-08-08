@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="./images/ES-Icon-sm.png" />
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    
+            
+    <title>View All</title>
+    
+</head>
+<body>
+  <wrapper class="container valign-wrapper"></wrapper>
+    <!-- Header  -->
+    <nav id="navTop">
+      <div class="nav-wrapper">
+  <img
+    id="header-logo"
+    class="valign-wrapper brand-logo center responsive-img"
+    src="images/EventSmashLogo-nav.png"
+  />
+      </nav>
+      <!--Sidebar-->
+      <div id="main" class="row pageWrap">
+        <div id="sideBar" class="col s2">
+          <div class="col" id=""><img class="nav circle" src="./images/ES-Icon-nav.png"></div>
+          <div class="col" id="play"><img class="nav circle" src="./images/EB-icon-nav.png"></div>
+          <div class="col" id="meet"><img class="nav circle" src="./images/MU-icon-nav.png"></div>
+          <div class="col"><img class="nav circle" src="./images/cal-date-nav.png"></div>
+          <div class="col"><img class="nav circle" src="./images/cal-list.nav.png"></div>
+        </div>
+
+
+        <!--Events content-->
+       
+
+        <div class="container col s10">
+          <ul class="collection ">
+              <li class="collection-item avatar">
+                  <i class="material-icons circle">assignment_ind</i>
+                  <span class="title">MeetName</span>
+                  <p>time and date <br>
+                     meetup or eventbrite
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">arrow_forward</i></a>
+                </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle">card_giftcard</i>
+                <span class="title">MeetName</span>
+                <p>time and date <br>
+                   meetup or eventbrite
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">arrow_forward</i></a>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">MeetName</span>
+                <p>time and date <br>
+                  meetup or eventbrite
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">arrow_forward</i></a>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle red">play_arrow</i>
+                <span class="title">Title</span>
+                <p>First Line <br>
+                   Second Line
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">arrow_forward</i></a>
+              </li>
+            </ul>
+            <input type="text" class="datepicker">
+          </div>
+          </div>
+      </div>
+
+
+
+      
+
+
+
+<!--WebAudioAPITest-->
+<!-- <div>
+  <button id ="play">play</button>
+</div> -->
+  <!-- <div class="container">
+    <div class="keyboard"></div>
+  </div>
+  <div class="settingsBar">
+    <div class="left">
+      <span>Volume: </span>
+      <input type="range" min="0.0" max="1.0" step="0.01"
+          value="0.5" list="volumes" name="volume">
+      <datalist id="volumes">
+        <option value="0.0" label="Mute">
+        <option value="1.0" label="100%">
+      </datalist>
+    </div>
+    <div class="right">
+      <span>Current waveform: </span>
+      <select name="waveform">
+        <option value="sine">Sine</option>
+        <option value="square" selected>Square</option>
+        <option value="sawtooth">Sawtooth</option>
+        <option value="triangle">Triangle</option>
+        <option value="custom">Custom</option>
+      </select>
+    </div>
+  </div> -->
+
+<!--action button-->
+<!-- <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div> -->
+
+  
+
+  <!--Footer-->
+  <nav id="footNav" class="navFooter">
+    <div  class="nav-wrapper">
+        <div class="row">
+        <div class="col s1"></div>
+        <div class="col s2"><img class="nav" src="./images/ES-Icon-nav.png"></div>
+        <div class="col s2"><img class="nav" src="./images/EB-icon-nav.png"></div>
+        <div class="col s2"><img class="nav" src="./images/MU-icon-nav.png"></div>
+        <div class="col s2"><img class="nav" src="./images/cal-date-nav.png"></div>
+        <div class="col s2"><img class="nav" src="./images/cal-list.nav.png"></div>
+        <div class="col s1"></div>
+    </div>
+    </div>
+</nav>
+  <footer class="col s12">
+    <div class="footer-copyright">
+        <div class="container">
+          © 2020 Copyright EventSmash | Event Data Provided by
+          <a href="https://www.eventbrite.com/platform/" title="EventBrite API"
+            >EventBrite.com</a
+          >
+          &
+          <a href="https://www.meetup.com/meetup_api/" title="Meetup API"
+            >Meetup.com</a
+          >
+        </div>
+      </div>
+    </footer>
+        
+         
+<!--Scripts-->
+<!--jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--Materialize-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!-- Moment.js CDN request-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.42/Tone.js"></script>
+     <script src="script.js"></script>
+     <script src="tone.js"></script>
+     
+    
+</body>
+</html>
