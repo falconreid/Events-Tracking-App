@@ -1,57 +1,36 @@
+//event brite tone
+// const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+// const osc = ctx.createOscillator();
+
+// osc.connect(ctx.destination);
 
 
-  //web audio api test
-
-//eventbrite tone
- 
-// const audioCtx = new AudioContext();
-// const osc = audioCtx.createOscillator();
-// const play = document.getElementById("play");
-// const meet = document.getElementById("meet");
-
-
-// osc.type = "square";
-// osc.frequency.setValueAtTime(400, audioCtx.currentTime);
-
-// function startOsc(){
-//   osc.connect(audioCtx.destination);
-//   osc.start();
-//   osc.stop(audioCtx.currentTime + .5);
-// }
-// play.addEventListener('click', startOsc);
-// meet.addEventListener('click', startOsc);
-
-const ctx = new (window.AudioContext || window.webkitAudioContext());
 const play = document.getElementById("play");
-const meet = document.getElementById("meet");
+play.addEventListener("click", () => {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
 
-function Oscillator(frequency, detune){
-  this.osc = ctx.createOscillator()
-  this.osc.type = 'sawtooth';
-  this.osc.frequency.value = frequency;
-  this.osc.detune.value = detune;
-  this.osc.connect(ctx.destination);
-  this.osc.connect(ctx.destination);
-  
-console.log(ctx.state);
-const osc1 = new Oscillator(440, 0);
-const osc2 = new Oscillator(440, 10);
+  const osc = ctx.createOscillator();
 
-play.addEventListener('click', () => {
+  osc.connect(ctx.destination);
   osc.start(0);
   osc.stop(0.5);
   osc.onended = () => {
-    console.log(ctx.state)
+    console.log(ctx.state);
   };
 });
+
+//meetup tone
+
+//pull user events
+//append user events to list or calender view
 
 // meet.addEventListener('click', () => {
 //   ctx.resume().then(() => console.log(state))
 // });
 
-
 // document.addEventListener('DOMContentLoaded', function() {
-//   var elems = document.querySelectorAll('.datepicker'); 
+//   var elems = document.querySelectorAll('.datepicker');
 //   var instances = M.Datepicker.init(elems, options);
 // });
 
@@ -60,10 +39,3 @@ play.addEventListener('click', () => {
 // $(document).ready(function(){
 //   $('.datepicker').datepicker();
 // });
-
-
-
-
-
-
-};
