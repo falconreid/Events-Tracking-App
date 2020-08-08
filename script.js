@@ -87,8 +87,8 @@ meet.addEventListener("click", () => {
 //   var instances = M.Datepicker.init(elems, options);
 // });
 
-// // Or with jQuery
+// Or with jQuery
 
-// $(document).ready(function(){
-//   $('.datepicker').datepicker();
-// });
+$(document).ready(function(){
+  $('.datepicker').datepicker();
+});
