@@ -117,6 +117,16 @@ body {
   font-family: "geometria", "blogger_sansregular", Arial, Helvetica, sans-serif;
 }
 
+#main {
+  background-image: url("../images/activities-background1.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-width: 75vh;
+  min-height: 200vh;
+}
+
+
 #landingPage {
   display: none;
 }
