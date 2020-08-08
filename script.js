@@ -88,6 +88,10 @@ meet.addEventListener("click", () => {
 // });
 
 // Or with jQuery
+// document.getElementById("cal");
+// cal.addEventListener('click', ()=>{
+//   $('.datepicker').datepicker();
+// });
 
 $(document).ready(function(){
   $('.datepicker').datepicker();
