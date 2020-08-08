@@ -1,10 +1,4 @@
 //event brite tone
-// const ctx = new (window.AudioContext || window.webkitAudioContext)();
-
-// const osc = ctx.createOscillator();
-
-// osc.connect(ctx.destination);
-
 
 const play = document.getElementById("play");
 play.addEventListener("click", () => {
@@ -58,29 +52,39 @@ meet.addEventListener("click", () => {
   };
 });
 
+//calendar tone
 
-// const play = document.getElementById("play");
-// play.addEventListener("click", () => {
-// const ctx = new (window.AudioContext || window.webkitAudioContext)();
+const cal = document.getElementById("cal");
+cal.addEventListener("click", () => {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
 
-// const audioElement = document.querySelector('audio');
+  const osc = ctx.createOscillator();
+  const amp = ctx.createGain();
 
-// const mediaElement = ctx.createMediaElementSource(audioElement);
+  osc.frequency.value = 300;
+  osc.connect(amp.gain);
 
-// mediaElement.connect(ctx.destination);
-  
-//   audio.start(0);
-//   audio.stop(0.5);
+  const filter = ctx.createBiquadFilter();
 
-//});
+  filter.frequency.value = 550;
+
+  osc.connect(filter);
+  filter.connect(ctx.destination);
+
+  //osc.connect(ctx.destination);
+  osc.start(0);
+  osc.stop(0.5);
+  osc.onended = () => {
+    console.log(ctx.state);
+  };
+});
+
+
 
 
 //pull user events
 //append user events to list or calender view
 
-// meet.addEventListener('click', () => {
-//   ctx.resume().then(() => console.log(state))
-// });
 
 // document.addEventListener('DOMContentLoaded', function() {
 //   var elems = document.querySelectorAll('.datepicker');
@@ -93,6 +97,19 @@ meet.addEventListener("click", () => {
 //   $('.datepicker').datepicker();
 // });
 
-$(document).ready(function(){
-  $('.datepicker').datepicker();
+
+// document.getElementById("cal");
+// cal.addEventListener('click', ()=>{
+//   $(document).ready(function(){
+//     $('#cal').datepicker();
+//   })
+// });
+
+
+// $(document).ready(function(){
+//   $('.datepicker').datepicker();
+// });
+
+$("img#datepicker").on("click", function () {
+  $(".datepicker").click();
 });
