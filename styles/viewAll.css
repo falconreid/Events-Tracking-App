@@ -245,6 +245,15 @@ nav.navFooter {
   background-size: cover;
 }
 
+.collection{
+  display: none;
+}
+
+#piano {
+  display: none;
+}
+
+
 @media screen and (device-width: 280px) and (device-height: 653px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
   /* h4 {
     font-size: 1.75rem !important;
