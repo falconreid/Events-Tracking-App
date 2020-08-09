@@ -41,9 +41,6 @@ function getRandomImage(imgAr, path) {
   });
 }
 
-// let rando = getRandomImage(random_images_array);
-// setTimeout(getRandomImage(random_images_array), 4000);
-// setTimeout(console.log("I made it further"), 4000);
 setTimeout(function () {
   getRandomImage(random_images_array);
   console.log("timer is now working");
