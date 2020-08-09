@@ -1,7 +1,12 @@
 // hide load page
 
-setTimeout(hideLoadPage, 2500);
-setTimeout(showLandingPage, 2500);
+setTimeout(function () {
+  hideLoadPage();
+}, 2500);
+
+setTimeout(function () {
+  showLandingPage();
+}, 2500);
 
 function hideLoadPage() {
   $("#loadPage").attr("style", "display: none;");
@@ -25,14 +30,22 @@ function getRandomImage(imgAr, path) {
   var num = Math.floor(Math.random() * imgAr.length);
   var img = imgAr[num];
   var imgStr = 'url("' + path + img + '") ';
-  // document.write(imgStr); document.close();
-  $("#landingPage.lpImage").attr("style", "background-image:" + imgStr + " ;");
-  //   console.log("I made it here");
+
+  //   $("#landingPage.lpImage").attr("style", "background-image:" + imgStr + " ;");
+  //   console.log(test);
+  $("#landingPage.lpImage").css({
+    "background-image": 'url("' + path + img + '") ',
+    "background-position": "center",
+    "background-attachment": "fixed",
+    "background-size": "cover",
+  });
 }
 
-// let rando = getRandomImage(random_images_array);
-// setTimeout(getRandomImage(random_images_array), 4000);
-// setTimeout(console.log("I made it further"), 4000);
 setTimeout(function () {
-  getRandomImage(array, path);
-}, 4000);
+  getRandomImage(random_images_array);
+  console.log("timer is now working");
+}, 2600);
+
+let timeDiv = $("<div id='time'></div>");
+$("#mainContent").prepend(timeDiv);
+$("#time").text(moment().format(`dddd,  DD/MM`));
