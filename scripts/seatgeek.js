@@ -76,36 +76,37 @@ $("#find-event").on("click", function(event){
 
        var eventDetails= $("#event-view");
 
-       var eventDetails= $("#event-view");
-
        let mappedCards = response.events.map(event => {
-         var temp = `
-          <div class = "card">
-            <h2>${event.title}</h2>
-            <p>${event.type}</p>
-            <p>${event.description}</p>
-          </div> `;
+         var temp =`
+              <div class="card">
+                <div class="card-image">
+                  <img src=${event.performers[0].image}>
+                  <span class="card-title">${event.title}</span>
+                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                </div>
+                <div class="card-content">
+                  <p>${event.description}</p>
+                  <p>${event.type}</p>
+                </div>
+              </div>
+            </div>
+          </div>`;
 
          eventDetails.append(temp);
        })
 
+       //Original -Working
+       /* var temp = `
+          <div class = "card">
+            <h2>${event.title}</h2>
+            <p>${event.type}</p>
+            <p>${event.description}</p>
+          </div> `; */
+
     
         
 
-        /* eventDetails.append(`<div class="row">
-        <div class="col s12 m6">
-          <div class="card small">
-            <div class="card-image">
-              <img src="">
-              <span class="card-title">${response.title}</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-            <div class="card-content">
-              <p>"Test"</p>
-            </div>
-          </div>
-        </div>
-      </div>`) */
+        
     });
 
     //Clear Results
