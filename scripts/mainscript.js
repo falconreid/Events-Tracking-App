@@ -95,6 +95,8 @@ return `<div class="card">
 document.addEventListener("click",function(event){
   console.log(event.target)
   if(event.target.classList.contains("gothere")){
-    console.log("you clicked on a card")
+    localStorage.setItem("event", JSON.stringify(event));
+    var newInput = $('<li>').text.(JSON.parse(localStorage.getItem("event")));
+    $("#pastSearch").append(newEvent);
   }
 })
