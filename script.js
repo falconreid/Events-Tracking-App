@@ -142,7 +142,7 @@ listEvents.addEventListener("click", () => {
 
 $(document).ready(function () {
   $("img#listView").on("click", function () {
-    $(".collection").css("display","block");
+    $(".collection").fadeToggle(1000);
   });
 });
 
@@ -153,3 +153,4 @@ $(document).ready(function () {
 
   $(".datepicker").datepicker();
 });
+

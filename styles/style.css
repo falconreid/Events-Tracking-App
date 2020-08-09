@@ -127,6 +127,10 @@ body {
   margin-bottom: 0px;
 }
 
+#piano {
+  display: none;
+}
+
 .collection{
   display: none;
 }
