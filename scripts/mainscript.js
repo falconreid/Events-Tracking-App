@@ -45,3 +45,7 @@ setTimeout(function () {
   getRandomImage(random_images_array);
   console.log("timer is now working");
 }, 2600);
+
+let timeDiv = $("<div id='time'></div>");
+$("#mainContent").prepend(timeDiv);
+$("#time").text(moment().format(`dddd,  DD/MM`));
