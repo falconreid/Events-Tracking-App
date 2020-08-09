@@ -79,7 +79,35 @@ cal.addEventListener("click", () => {
   };
 });
 
-$(document).ready
+//list tone
+const listEvents = document.getElementById("listEvents");
+listEvents.addEventListener("click", () => {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+  const osc = ctx.createOscillator();
+  const amp = ctx.createGain();
+
+  osc.frequency.value = 350;
+  osc.connect(amp.gain);
+
+  const filter = ctx.createBiquadFilter();
+
+  filter.frequency.value = 650;
+
+  osc.connect(filter);
+  filter.connect(ctx.destination);
+
+  //osc.connect(ctx.destination);
+  osc.start(0);
+  osc.stop(0.5);
+  osc.onended = () => {
+    console.log(ctx.state);
+  };
+});
+
+
+
+
 
 
 
@@ -111,6 +139,12 @@ $(document).ready
 // $(document).ready(function(){
 //   $('.datepicker').datepicker();
 // });
+
+$(document).ready(function () {
+  $("img#listView").on("click", function () {
+    $(".collection").css("display","block");
+  });
+});
 
 $(document).ready(function () {
   $("img#datepicker").on("click", function () {
