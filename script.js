@@ -79,6 +79,8 @@ cal.addEventListener("click", () => {
   };
 });
 
+$(document).ready
+
 
 
 
@@ -110,6 +112,10 @@ cal.addEventListener("click", () => {
 //   $('.datepicker').datepicker();
 // });
 
-$("img#datepicker").on("click", function () {
-  $(".datepicker").click();
+$(document).ready(function () {
+  $("img#datepicker").on("click", function () {
+      $(".datepicker").click();
+  });
+
+  $(".datepicker").datepicker();
 });

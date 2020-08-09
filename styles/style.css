@@ -123,8 +123,19 @@ body {
   background-attachment: fixed;
   background-size: cover;
   min-width: 75vh;
-  min-height: 200vh;
+  min-height: 300px;
+  margin-bottom: 0px;
 }
+
+.collection{
+  display: none;
+}
+
+
+
+/* .collection{
+  display: none;
+} */
 
 
 #landingPage {
