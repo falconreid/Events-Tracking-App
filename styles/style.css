@@ -117,29 +117,6 @@ body {
   font-family: "geometria", "blogger_sansregular", Arial, Helvetica, sans-serif;
 }
 
-
-/*
-#main {
-  background-image: url("../images/activities-background1.png");
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  min-width: 75vh;
-  min-height: 300px;
-  margin-bottom: 0px;
-}
-*/
-
-#piano {
-  display: none;
-}
-
-.collection{
-  display: none;
-}
-
-
-
 #landingPage {
   display: none;
 }
@@ -181,6 +158,13 @@ header img #header-logo {
 }
 
 /* Sticky Footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -191,6 +175,10 @@ main {
   flex: 1 0 auto;
 }
 
+.footer-copyright {
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
 nav img.nav {
   width: 35px;
   height: 35px;
@@ -222,6 +210,8 @@ nav img.nav:hover {
 }
 
 #mainContent {
+  margin-left: 20px;
+  margin-top: 33px;
   border-radius: 5px;
   padding: 10px;
   -webkit-box-shadow: inset 0px 0px 3px 3px rgba(49, 133, 252, 1);
@@ -254,3 +244,31 @@ nav.navFooter {
   background-attachment: fixed;
   background-size: cover;
 }
+
+.collection{
+  display: none;
+}
+
+#piano {
+  display: none;
+}
+
+
+@media screen and (device-width: 280px) and (device-height: 653px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+  /* h4 {
+    font-size: 1.75rem !important;
+    line-height: 105% !important;
+  } */
+  #mainContent {
+    margin-left: 20px;
+    margin-top: 33px;
+    border-radius: 5px;
+    padding: 10px;
+    /* -webkit-box-shadow: inset 0px 0px 3px 3px rgba(49, 133, 252, 1);
+    -moz-box-shadow: inset 0px 0px 3px 3px rgba(49, 133, 252, 1);
+    box-shadow: inset 0px 0px 3px 3px rgba(49, 133, 252, 1); */
+  }
+}
+
+
+

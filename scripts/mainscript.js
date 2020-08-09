@@ -1,7 +1,12 @@
 // hide load page
 
-setTimeout(hideLoadPage, 2500);
-setTimeout(showLandingPage, 2500);
+setTimeout(function () {
+  hideLoadPage();
+}, 2500);
+
+setTimeout(function () {
+  showLandingPage();
+}, 2500);
 
 function hideLoadPage() {
   $("#loadPage").attr("style", "display: none;");
@@ -10,6 +15,144 @@ function hideLoadPage() {
 function showLandingPage() {
   $("#landingPage").attr("style", "display:block;");
 }
+
+//event brite tone
+
+const play = document.getElementById("play");
+play.addEventListener("click", () => {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+  const osc = ctx.createOscillator();
+  const amp = ctx.createGain();
+
+  osc.frequency.value = 200;
+  osc.connect(amp.gain);
+
+  const filter = ctx.createBiquadFilter();
+
+  filter.frequency.value = 1250;
+
+  osc.connect(filter);
+  filter.connect(ctx.destination);
+
+  
+
+  //osc.connect(ctx.destination);
+  osc.start(0);
+  osc.stop(0.5);
+  osc.onended = () => {
+    console.log(ctx.state);
+  };
+});
+
+//meetup tone
+
+const meet = document.getElementById("meet");
+meet.addEventListener("click", () => {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+  const osc = ctx.createOscillator();
+  const amp = ctx.createGain();
+
+  osc.frequency.value = 250;
+  osc.connect(amp.gain);
+
+  const filter = ctx.createBiquadFilter();
+
+  filter.frequency.value = 1250;
+
+  osc.connect(filter);
+  filter.connect(ctx.destination);
+
+  //osc.connect(ctx.destination);
+  osc.start(0);
+  osc.stop(0.5);
+  osc.onended = () => {
+    console.log(ctx.state);
+  };
+});
+
+//calendar tone
+
+const cal = document.getElementById("cal");
+cal.addEventListener("click", () => {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+  const osc = ctx.createOscillator();
+  const amp = ctx.createGain();
+
+  osc.frequency.value = 300;
+  osc.connect(amp.gain);
+
+  const filter = ctx.createBiquadFilter();
+
+  filter.frequency.value = 1250;
+
+  osc.connect(filter);
+  filter.connect(ctx.destination);
+
+  //osc.connect(ctx.destination);
+  osc.start(0);
+  osc.stop(0.5);
+  osc.onended = () => {
+    console.log(ctx.state);
+  };
+});
+
+
+//list tone
+const listEvents = document.getElementById("listEvents");
+listEvents.addEventListener("click", () => {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+  const osc = ctx.createOscillator();
+  const amp = ctx.createGain();
+
+  osc.frequency.value = 350;
+  osc.connect(amp.gain);
+
+  const filter = ctx.createBiquadFilter();
+
+  filter.frequency.value = 1250;
+
+  osc.connect(filter);
+  filter.connect(ctx.destination);
+
+  //osc.connect(ctx.destination);
+  osc.start(0);
+  osc.stop(0.5);
+  osc.onended = () => {
+    console.log(ctx.state);
+  };
+});
+
+
+//displays list
+$(document).ready(function () {
+  $("img#listView").on("click", function () {
+    $(".collection").fadeToggle(1000);
+  });
+});
+
+//hides about section
+$(document).ready(function () {
+  $("img#listView").on("click", function () {
+    $("#about").toggle();
+  });
+});
+
+
+
+
+// $(document).ready(function () {
+//   $("img#datepicker").on("click", function () {
+//       $(".datepicker").click();
+//   });
+
+//   $(".datepicker").datepicker();
+// });
+
+
 
 // create random background image - derived from: https://www.dyn-web.com/code/random-image-js/
 
@@ -25,14 +168,21 @@ function getRandomImage(imgAr, path) {
   var num = Math.floor(Math.random() * imgAr.length);
   var img = imgAr[num];
   var imgStr = 'url("' + path + img + '") ';
-  // document.write(imgStr); document.close();
-  $("#landingPage.lpImage").attr("style", "background-image:" + imgStr + " ;");
-  //   console.log("I made it here");
+
+  //   $("#landingPage.lpImage").attr("style", "background-image:" + imgStr + " ;");
+  //   console.log(test);
+  $("#landingPage.lpImage").css({
+    "background-image": 'url("' + path + img + '") ',
+    "background-position": "center",
+    "background-attachment": "fixed",
+    "background-size": "cover",
+  });
 }
 
 // let rando = getRandomImage(random_images_array);
 // setTimeout(getRandomImage(random_images_array), 4000);
 // setTimeout(console.log("I made it further"), 4000);
 setTimeout(function () {
-  getRandomImage(array, path);
-}, 4000);
+  getRandomImage(random_images_array);
+  console.log("timer is now working");
+}, 2600);
