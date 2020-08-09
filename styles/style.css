@@ -117,6 +117,8 @@ body {
   font-family: "geometria", "blogger_sansregular", Arial, Helvetica, sans-serif;
 }
 
+
+/*
 #main {
   background-image: url("../images/activities-background1.png");
   background-position: center;
@@ -126,6 +128,7 @@ body {
   min-height: 300px;
   margin-bottom: 0px;
 }
+*/
 
 #piano {
   display: none;
@@ -134,6 +137,7 @@ body {
 .collection{
   display: none;
 }
+
 
 
 #landingPage {
