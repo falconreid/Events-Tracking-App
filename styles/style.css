@@ -245,8 +245,6 @@ nav.navFooter {
   background-size: cover;
 }
 
-<<<<<<< HEAD
-=======
 .collection{
   display: none;
 }
@@ -256,7 +254,6 @@ nav.navFooter {
 }
 
 
->>>>>>> addviewall
 @media screen and (device-width: 280px) and (device-height: 653px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
   /* h4 {
     font-size: 1.75rem !important;
@@ -273,7 +270,6 @@ nav.navFooter {
   }
 }
 
-<<<<<<< HEAD
 .eventful-small {
   position: relative !important;
   width: 100px !important;
@@ -284,7 +280,3 @@ nav.navFooter {
 #time {
   text-align: center;
 }
-=======
-
-
->>>>>>> addviewall
