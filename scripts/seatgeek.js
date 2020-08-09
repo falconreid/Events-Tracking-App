@@ -76,21 +76,20 @@ $("#find-event").on("click", function(event){
 
        var eventDetails= $("#event-view");
 
-       let mappedEvents = response.events.map(event => {
-         return event.title
-       })
+       var eventDetails= $("#event-view");
 
        let mappedCards = response.events.map(event => {
-         return (
+         var temp = `
           <div class = "card">
-            <h2>event.title</h2>
-            <p>event.type</p>
-            <p>event.description</p>
-          </div>
-         )
+            <h2>${event.title}</h2>
+            <p>${event.type}</p>
+            <p>${event.description}</p>
+          </div> `;
+
+         eventDetails.append(temp);
        })
 
-       eventDetails.append(mappedCards)
+    
         
 
         /* eventDetails.append(`<div class="row">
