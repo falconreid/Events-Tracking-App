@@ -17,11 +17,11 @@ document.addEventListener("keydown", e => {
     case "q":
       return synth.triggerAttack("G#3");
     case "a":
-      return synth.triggerAttack("A4");
+      return synth.triggerAttack("A3");
     case "w":
-      return synth.triggerAttack("A#4");
+      return synth.triggerAttack("A#3");
     case "s":
-      return synth.triggerAttack("B4");
+      return synth.triggerAttack("B3");
     case "d":
       return synth.triggerAttack("C4");
     case "r":
