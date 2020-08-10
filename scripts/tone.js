@@ -72,3 +72,4 @@ document.addEventListener("keyup", e => {
        synth.triggerRelease(); 
   }
 });
+

@@ -86,7 +86,7 @@ cal.addEventListener("click", () => {
 
   const filter = ctx.createBiquadFilter();
 
-  filter.frequency.value = 1250;
+  filter.frequency.value = 2250;
 
   osc.connect(filter);
   filter.connect(ctx.destination);
@@ -141,10 +141,16 @@ $(document).ready(function () {
   });
 });
 
-
-
-
 //date picker
+      $(document).ready(function(){
+  $('img#datepicker').datepicker();
+});
+    
+
+
+
+
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //   var elems = document.querySelectorAll('.datepicker');
