@@ -88,7 +88,7 @@ return `<div class="card">
 </div>
 <div class="card-content" id="details">
   <p>${event.info}</p>
-  <button class= "gothere">gothere</button>
+  <button class= "gothere">Save Event!</button>
 </div>
 </div>`
 }
@@ -96,7 +96,7 @@ document.addEventListener("click",function(event){
   console.log(event.target)
   if(event.target.classList.contains("gothere")){
     localStorage.setItem("event", JSON.stringify(event));
-    var newInput = $('<li>').text.(JSON.parse(localStorage.getItem("event")));
+    var newInput = $('<li>').text.JSON.parse(localStorage.getItem("event"));
     $("#pastSearch").append(newEvent);
   }
 })
